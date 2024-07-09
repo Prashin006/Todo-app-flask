@@ -1,13 +1,32 @@
 {% extends 'base.html' %}
 {% block title %}
-Index Page
+Task Manager
 {% endblock %}
 {% block content %}
-<h1>
-    This is the main content
-</h1>
-<a href="#">
-    Click me
-</a>
+<div class="content">
+    <h1>Task Master</h1>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date_created.date() }}</td>
+            <td>
+                <a href="">Delete</a>
+                <br>
+                <a href="">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="post">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Task">
+    </form>
+</div>
 {% endblock %}
 

@@ -1,4 +1,19 @@
-body{
+body, html{
     margin: 0;
     font-family: sans-serif;
+    background-color: lightblue;
+}
+
+.content{
+    margin: 0 auto;
+    width: 40%;
+}
+
+table, th, td{
+    border: 1px solid #212;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
 }
